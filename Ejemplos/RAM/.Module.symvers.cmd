@@ -1,0 +1,1 @@
+savedcmd_/home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/RAM/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/RAM/Module.symvers -T /home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/RAM/modules.order -i Module.symvers -e 
