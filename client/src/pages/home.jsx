@@ -1,6 +1,6 @@
-import NavBar from '../components/navbar';
+import NavBar from '../components/navvv';
 import Carrousel from '../components/carrousel';
-
+import Buttonn from '../components/button';
 
 export default function Home() {
 
@@ -8,6 +8,7 @@ export default function Home() {
         <div>
         <NavBar />
         <Carrousel />
+        <Buttonn />
         </div>
     );
 }
