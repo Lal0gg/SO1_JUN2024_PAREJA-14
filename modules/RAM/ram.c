@@ -38,8 +38,8 @@ static int escribir_archivo(struct seq_file *archivo, void *v)
     unsigned long used_ram = total_ram - free_ram;
 
     // Escribir los valores en el archivo
-    seq_printf(archivo, "RAM utilizada: %lu kB\n", used_ram);
-    seq_printf(archivo, "RAM libre: %lu kB\n", free_ram);
+    seq_printf(archivo, "RAMused,%lu\n", used_ram);
+    seq_printf(archivo, "RAMfree,%lu\n", free_ram);
 
     return 0;
 }
@@ -72,7 +72,7 @@ static struct file_operations operaciones =
 // Funcion a ejecutar al insertar el modulo en el kernel con insmod
 static int __init insertar(void)
 {
-    proc_create("ram_201900647", 0, NULL, &operaciones);
+    proc_create("ram_so1_jun2024", 0, NULL, &operaciones);
     printk(KERN_INFO "201900647\n");
     return 0;
 }
@@ -80,7 +80,7 @@ static int __init insertar(void)
 // Funcion a ejecutar al remover el modulo del kernel con rmmod
 static void __exit remover(void)
 {
-    remove_proc_entry("ram_201900647", NULL);
+    remove_proc_entry("ram_so1_jun2024", NULL);
     printk(KERN_INFO "Laboratorio Sistemas Operativos 1\n");
 }
 
