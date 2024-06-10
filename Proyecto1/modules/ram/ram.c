@@ -73,6 +73,7 @@ static const struct proc_ops operaciones =
 {
    .proc_open = al_abrir,
    .proc_read = seq_read,
+   .proc_lseek = seq_lseek,
    .proc_release = single_release
 };
 #else
@@ -80,6 +81,7 @@ static const struct file_operations operaciones =
 {
    .open = al_abrir,
    .read = seq_read,
+   .llseek = seq_lseek,
    .release = single_release
 };
 #endif
