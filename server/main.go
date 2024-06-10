@@ -1,14 +1,15 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"math"
+	"net/http"
 	"os/exec"
 	"strconv"
 	"strings"
-	"encoding/json"
-	"net/http"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
 
@@ -22,7 +23,14 @@ func main() {
 	router.HandleFunc("/ram", getRamInfo).Methods("GET")
 	fmt.Println("Servidor escuchando en el puerto 8080...")
 
-	http.ListenAndServe(":8080", router)
+	// Wrap the router with CORS support
+	corsHandler := handlers.CORS(
+		handlers.AllowedOrigins([]string{"*"}),
+		handlers.AllowedMethods([]string{"GET", "POST", "OPTIONS"}),
+		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
+	)(router)
+
+	http.ListenAndServe(":8080", corsHandler)
 }
 
 func readRamInfo() RAM {
@@ -68,10 +76,9 @@ func round(num float64, decimals int) float64 {
 	return math.Round(num*pow) / pow
 }
 
-
 func getRamInfo(w http.ResponseWriter, r *http.Request) {
 	ramInfo := readRamInfo()
-	
+
 	response, err := json.Marshal(ramInfo)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
