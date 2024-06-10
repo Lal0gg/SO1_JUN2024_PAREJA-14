@@ -47,8 +47,8 @@ static int escribir_a_proc(struct seq_file *file_proc, void *v)
         total_usage += cpu_time;
     }
     //---------------------------------------------------------------------------
-    seq_printf(file_proc, "{\n\"cpu_total\":%d,\n", total_cpu_time);
-    seq_printf(file_proc, "\"cpu_porcentaje\":%d,\n", (total_usage * 100) / total_cpu_time);
+    seq_printf(file_proc, "{\n\"CpuUsed\":%d,\n", total_cpu_time);
+    seq_printf(file_proc, "\"CpuPercent\":%d,\n", (total_usage * 100) / total_cpu_time);
     seq_printf(file_proc, "\"processes\":[\n");
     int b = 0;
 
@@ -146,14 +146,14 @@ static struct proc_ops archivo_operaciones = {
 
 static int __init modulo_init(void)
 {
-    proc_create("modulo_cpu", 0, NULL, &archivo_operaciones);
+    proc_create("cpu_so1_1s2024", 0, NULL, &archivo_operaciones);
     printk(KERN_INFO "Insertar Modulo CPU\n");
     return 0;
 }
 
 static void __exit modulo_cleanup(void)
 {
-    remove_proc_entry("modulo_cpu", NULL);
+    remove_proc_entry("cpu_so1_1s2024", NULL);
     printk(KERN_INFO "Remover Modulo CPU\n");
 }
 

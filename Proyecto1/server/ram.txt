@@ -8,9 +8,6 @@ import (
 	"os/exec"
 	"strconv"
 	"strings"
-
-	"github.com/gorilla/handlers"
-	"github.com/gorilla/mux"
 )
 
 type RAM struct {
@@ -46,20 +43,20 @@ type CPU struct {
 }
 
 func main() {
-	router := mux.NewRouter()
-	router.HandleFunc("/ram", getRamInfo).Methods("GET")
-	router.HandleFunc("/cpu", getCpuInfo).Methods("GET")
-	fmt.Println("Servidor escuchando en el puerto 8080...")
+	// router := mux.NewRouter()
+	// router.HandleFunc("/ram", getRamInfo).Methods("GET")
+	// fmt.Println("Servidor escuchando en el puerto 8080...")
 
-	// Wrap the router with CORS support
-	corsHandler := handlers.CORS(
-		handlers.AllowedOrigins([]string{"*"}),
-		handlers.AllowedMethods([]string{"GET", "POST", "OPTIONS"}),
-		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
-	)(router)
+	// // Wrap the router with CORS support
+	// corsHandler := handlers.CORS(
+	// 	handlers.AllowedOrigins([]string{"*"}),
+	// 	handlers.AllowedMethods([]string{"GET", "POST", "OPTIONS"}),
+	// 	handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
+	// )(router)
 
-	http.ListenAndServe(":8080", corsHandler)
+	// http.ListenAndServe(":8080", corsHandler)
 
+	readCpuInfo()
 }
 
 func readRamInfo() RAM {
@@ -90,9 +87,10 @@ func readRamInfo() RAM {
 		}
 
 		// Asignar el valor a la estructura RAM según el nombre de la variable
-		if strings.Contains(ramSplit2[0], "RamUsed") {
-			ramInfo.RamUsed = round(val, 2)
-			ramInfo.RamFree = round(100-val, 2)
+		if strings.Contains(ramSplit2[0], "RAMused") {
+			ramInfo.RamUsed = round(val/100000, 2)
+		} else if strings.Contains(ramSplit2[0], "RAMfree") {
+			ramInfo.RamFree = round(100-ramInfo.RamUsed, 2)
 		}
 	}
 
@@ -127,7 +125,8 @@ func readCpuInfo() CPU {
 		return cpuInfo
 	}
 	output := string(outCpu)
-	fmt.Println("Output Success")
+	fmt.Println("CPU INFO:", output)
+
 	err = json.Unmarshal([]byte(output), &cpuInfo)
 	if err != nil {
 		fmt.Println("Error al parsear JSON:", err)
@@ -138,16 +137,4 @@ func readCpuInfo() CPU {
 
 }
 
-func getCpuInfo(w http.ResponseWriter, r *http.Request) {
-	cpuInfo := readCpuInfo()
 
-	response, err := json.Marshal(cpuInfo)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	// Escribir la respuesta JSON
-	w.Write(response)
-}

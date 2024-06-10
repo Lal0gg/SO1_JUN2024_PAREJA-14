@@ -18,47 +18,31 @@ MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Modulo de RAM, Laboratorio Sistemas Operativos 1");
 MODULE_AUTHOR("Lal0gg");
 
-static unsigned long calculate_mem_available(void)
-{
-    long cached, available;
-    unsigned long pagecache, reclaimable;
-
-    cached = global_node_page_state(NR_FILE_PAGES) -
-             global_node_page_state(NR_SHMEM);
-
-    pagecache = global_node_page_state(NR_ACTIVE_FILE) +
-                global_node_page_state(NR_INACTIVE_FILE);
-    reclaimable = global_node_page_state(NR_SLAB_RECLAIMABLE_B) +
-                  global_node_page_state(NR_KERNEL_MISC_RECLAIMABLE);
-
-    available = si.freeram + cached + reclaimable -
-                min(pagecache / 2, si.totalram - si.freeram - reclaimable);
-
-    return available * si.mem_unit / 1024;
-}
-
 static int escribir_archivo(struct seq_file *archivo, void *v)
 {
     init_meminfo();
 
     // Calcular la RAM total en KB
-    unsigned long total_ram = (si.totalram * si.mem_unit) / 1024;
+    unsigned long total_ram = (si.totalram * si.mem_unit )/ 1024;
 
     // Calcular la RAM libre en KB
-    unsigned long free_ram = (si.freeram * si.mem_unit) / 1024;
+    unsigned long free_ram = (si.freeram * si.mem_unit )/ 1024;
 
-    // Calcular la RAM disponible en KB
-    unsigned long available_ram = calculate_mem_available();
+    // Calcular la RAM disponible (incluida la memoria caché) en KB
+    unsigned long available_ram = ((si.bufferram + si.totalswap + si.freeram + (si.totalram - si.totalhigh) - (si.totalswap - si.freeswap)) * si.mem_unit) / 1024;
 
     // Calcular porcentaje de RAM libre
-    unsigned long percent_free = (available_ram * 100) / total_ram;
+    unsigned long percent_free = (free_ram * 100) / total_ram;
 
     // Calcular porcentaje de RAM en uso
     unsigned long percent_used = 100 - percent_free;
 
     // Escribir los valores en el archivo
-    seq_printf(archivo, "RAMfree,%lu\n", free_ram);
-    seq_printf(archivo, "RamUsed,%lu\n", percent_used);
+    seq_printf(archivo, "RAMtotal,%lu KB\n", total_ram);
+    seq_printf(archivo, "RAMfree,%lu KB\n", free_ram);
+    seq_printf(archivo, "RAMavailable,%lu KB\n", available_ram);
+    seq_printf(archivo, "PercentFree,%lu%%\n", percent_free);
+    seq_printf(archivo, "PercentUsed,%lu%%\n", percent_used);
 
     return 0;
 }

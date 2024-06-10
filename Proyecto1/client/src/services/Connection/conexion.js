@@ -14,3 +14,10 @@ export const GetInfoRam = async () => {
     console.log("Soy la respuesta de la api", res.data)
     return res
 }
+
+
+export const GetInfoCpu = async () => {
+    const res = await instance.get('cpu')
+    console.log("Soy la respuesta de la api", res.data)
+    return res
+}
