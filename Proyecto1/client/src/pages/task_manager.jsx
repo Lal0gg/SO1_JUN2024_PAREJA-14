@@ -1,22 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar2 from '../components/navbar2';
 import Card from '../components/card';
 import ReactEcharts from 'echarts-for-react';
 import '../components/styles/TaskManager.css';
 import '../components/styles/input.css';
-import Service from '../services/Service'
-import { useState,useEffect } from 'react';
-
-
-
+import Service from '../services/Service';
 
 export default function TaskManager() {
+  const [ramData, setRamData] = useState({ used: 0, free: 0 });
+  const [processorData, setProcessorData] = useState({ used: 0, free: 0 });
+  const [expandedRows, setExpandedRows] = useState([]);
+  const [processes, setProcesses] = useState([]);
 
-  const [rammData, setRamData] = useState({ used: 0, free: 0 });
-  const [processorDataa, setProcessorData] = useState({ used: 0, free: 0 });
-
-
-  // Función para generar un color aleatorio en formato hexadecimal
   const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -26,55 +21,79 @@ export default function TaskManager() {
     return color;
   };
 
-
   const GetRamInfo = async () => {
     Service.GetInfoRam().then((res) => {
       setRamData({ used: res.data.RamUsed, free: res.data.RamFree });
-      
-    }) 
-  }
-   useEffect(() => {
-  const interval = setInterval(() => {
-    GetRamInfo()
-  }, 2000);
-
-  return () => clearInterval(interval);
-}, []);
-
-
-  const GetCpuInfo = async () => {
-    Service.GetInfoCpu().then((res) => {
-      let cpuUsed = res.data.CpuPercent / 100000
-      let cpuFree = 100 - cpuUsed
-      setProcessorData({ used:cpuUsed , free: cpuFree});
-      
-    }) 
-  }
+    });
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      GetCpuInfo()
+      GetRamInfo();
     }, 2000);
-  
+
     return () => clearInterval(interval);
   }, []);
+
+  const GetCpuInfo = async () => {
+    Service.GetInfoCpu().then((res) => {
+      let cpuUsed = res.data.CpuPercent / 1000000;
+      let cpuFree = 100 - cpuUsed;
+      setProcessorData({ used: cpuUsed, free: cpuFree });
+  
+      // Verificación de estados de proceso y sus hijos
+      const updatedProcesses = res.data.processes.map(process => {
+        let state;
+        switch (process.state) {
+          case 0:
+            state = "Running";
+            break;
+          case 1:
+            state = "Sleeping";
+            break;
+          case 4:
+            state = "Zombie";
+            break;
+          default:
+            state = "Stopped";
+        }
+  
+        // Verificación de estados de los hijos
+        const updatedChildren = process.child.map(child => {
+          let childState;
+          switch (child.state) {
+            case 0:
+              childState = "Running";
+              break;
+            case 1:
+              childState = "Sleeping";
+              break;
+            case 4:
+              childState = "Zombie";
+              break;
+            default:
+              childState = "Stopped";
+          }
+          return { ...child, state: childState };
+        });
+  
+        return { ...process, state, child: updatedChildren };
+      });
+  
+      setProcesses(updatedProcesses);
+    });
+  };
   
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      GetCpuInfo();
+    }, 2000);
 
-  // Datos para los gráficos
-  const ramData = {
-    used: rammData.used,
-    free: rammData.free
-  };
+    return () => clearInterval(interval);
+  }, []);
 
-  const processorData = {
-    used: processorDataa.used,
-    free: processorDataa.free
-  };
-
-
-
-  const ramm = {
+  const ramOptions = {
     tooltip: {
       trigger: 'item'
     },
@@ -82,7 +101,7 @@ export default function TaskManager() {
       top: '5%',
       left: 'center',
       textStyle: {
-        color: '#ffffff' // Cambia el color de las etiquetas de la leyenda
+        color: '#ffffff'
       }
     },
     series: [
@@ -95,15 +114,14 @@ export default function TaskManager() {
         itemStyle: {
           borderRadius: 10,
           color: function (params) {
-            // Genera un color aleatorio para cada sector
             return getRandomColor();
           }
         },
         label: {
-          show: false, // Puedes cambiar esto a true si quieres mostrar las etiquetas
+          show: false,
           position: 'outside',
           textStyle: {
-            color: 'white' // Cambia el color de las etiquetas de los datos
+            color: 'white'
           }
         },
         emphasis: {
@@ -111,24 +129,24 @@ export default function TaskManager() {
             show: false,
             fontSize: 20,
             fontWeight: 'bold',
-            color: '#ff0000' // Cambia el color de la etiqueta en el énfasis
+            color: '#ff0000'
           }
         },
         labelLine: {
           show: true,
           lineStyle: {
-            color: '#ffffff' // Cambia el color de las líneas de las etiquetas
+            color: '#ffffff'
           }
         },
         data: [
           { value: ramData.used, name: 'Used' },
-          { value: ramData.free, name: 'Free' },
+          { value: ramData.free, name: 'Free' }
         ]
       }
     ]
   };
 
-  const processor = {
+  const processorOptions = {
     tooltip: {
       trigger: 'item'
     },
@@ -136,7 +154,7 @@ export default function TaskManager() {
       top: '5%',
       left: 'center',
       textStyle: {
-        color: '#ffffff' // Cambia el color de las etiquetas de la leyenda
+        color: '#ffffff'
       }
     },
     series: [
@@ -149,15 +167,14 @@ export default function TaskManager() {
         itemStyle: {
           borderRadius: 10,
           color: function (params) {
-            // Genera un color aleatorio para cada sector
             return getRandomColor();
           }
         },
         label: {
-          show: false, // Puedes cambiar esto a true si quieres mostrar las etiquetas
+          show: false,
           position: 'outside',
           textStyle: {
-            color: 'white' // Cambia el color de las etiquetas de los datos
+            color: 'white'
           }
         },
         emphasis: {
@@ -165,29 +182,30 @@ export default function TaskManager() {
             show: false,
             fontSize: 20,
             fontWeight: 'bold',
-            color: '#ff0000' // Cambia el color de la etiqueta en el énfasis
+            color: '#ff0000'
           }
         },
         labelLine: {
           show: true,
           lineStyle: {
-            color: '#ffffff' // Cambia el color de las líneas de las etiquetas
+            color: '#ffffff'
           }
         },
         data: [
           { value: processorData.used, name: 'Used' },
-          { value: processorData.free, name: 'Free' },
+          { value: processorData.free, name: 'Free' }
         ]
       }
     ]
   };
 
-  const data = [
-    { PID: 1234, Name: 'Process 1', State: 'Running' },
-    { PID: 5678, Name: 'Process 2', State: 'Sleeping' },
-    { PID: 9101, Name: 'Process 3', State: 'Stopped' }
-  ];
-
+  const handleRowClick = (index) => {
+    if (expandedRows.includes(index)) {
+      setExpandedRows(expandedRows.filter(row => row !== index));
+    } else {
+      setExpandedRows([...expandedRows, index]);
+    }
+  };
 
   const handleFileUpload = (e) => {
     // Manejar la carga de archivos aquí
@@ -201,7 +219,6 @@ export default function TaskManager() {
     // Manejar el clic en el botón de enviar aquí
   };
 
-
   return (
     <div>
       <NavBar2 />
@@ -211,11 +228,11 @@ export default function TaskManager() {
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <div style={{ flex: 1, margin: '0 10px' }}>
               <h3>Ram</h3>
-              <ReactEcharts option={ramm} />
+              <ReactEcharts option={ramOptions} />
             </div>
             <div style={{ flex: 1, margin: '0 10px' }}>
               <h3>Processor</h3>
-              <ReactEcharts option={processor} />
+              <ReactEcharts option={processorOptions} />
             </div>
           </div>
         </Card>
@@ -252,15 +269,43 @@ export default function TaskManager() {
                   <th>PID</th>
                   <th>Name</th>
                   <th>State</th>
+                  <th>RAM</th>
                 </tr>
               </thead>
               <tbody>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item.PID}</td>
-                    <td>{item.Name}</td>
-                    <td>{item.State}</td>
-                  </tr>
+                {processes.map((process, index) => (
+                  <React.Fragment key={process.pid}>
+                    <tr onClick={() => handleRowClick(index)}>
+                      <td>{process.pid}</td>
+                      <td>{process.name}</td>
+                      <td>{process.state}</td>
+                      <td>{process.ram+" KB"}</td>
+                    </tr>
+                    {expandedRows.includes(index) && process.child && (
+                      <tr>
+                        <td colSpan="5">
+                          <table className="nested-table">
+                            <thead>
+                              <tr>
+                                <th>PID</th>
+                                <th>Name</th>
+                                <th>State</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {process.child.map(child => (
+                                <tr key={child.pid}>
+                                  <td>{child.pid}</td>
+                                  <td>{child.name}</td>
+                                  <td>{child.state}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>      
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>
