@@ -25,7 +25,7 @@ type Process struct {
 	State    int       `json:"state"`
 	RAM      int       `json:"ram"`
 	PIDPadre int       `json:"pidPadre"`
-	Child    []Process `json:"child"`
+	Children []Process `json:"children"`
 }
 
 type CPU struct {
@@ -113,21 +113,47 @@ func getRamInfo(w http.ResponseWriter, r *http.Request) {
 
 func readCpuInfo() CPU {
 	var cpuInfo CPU
-
-	// Ejecutar el comando cat para obtener la salida del archivo /proc/cpu_so1_1s2024
-	cmd := exec.Command("cat", "/proc/cpu_so1_1s2024")
+	cmd := exec.Command("sh", "-c", "cat /proc/cpu_so1_1s2024")
 	outCpu, err := cmd.Output()
 	if err != nil {
 		fmt.Println("Error al ejecutar el comando:", err)
 		return cpuInfo
 	}
-
-	// Decodificar la salida del comando en la estructura CPU
-	err = json.Unmarshal(outCpu, &cpuInfo)
+	output := string(outCpu)
+	fmt.Println("Output CpuInfo Success")
+	err = json.Unmarshal([]byte(output), &cpuInfo)
 	if err != nil {
 		fmt.Println("Error al parsear JSON:", err)
 		return cpuInfo
 	}
+
+	// Create a map to store processes by PID
+	processMap := make(map[int]*Process)
+	for i := range cpuInfo.Processes {
+		process := &cpuInfo.Processes[i]
+		process.Children = []Process{}
+		processMap[process.PID] = process
+	}
+
+	// Populate the Children field
+	for i := range cpuInfo.Processes {
+		process := &cpuInfo.Processes[i]
+		if process.PIDPadre != 0 {
+			parent, exists := processMap[process.PIDPadre]
+			if exists {
+				parent.Children = append(parent.Children, *process)
+			}
+		}
+	}
+
+	// Filter out processes that have a parent
+	var rootProcesses []Process
+	for _, process := range cpuInfo.Processes {
+		if process.PIDPadre == 0 {
+			rootProcesses = append(rootProcesses, process)
+		}
+	}
+	cpuInfo.Processes = rootProcesses
 
 	return cpuInfo
 }
