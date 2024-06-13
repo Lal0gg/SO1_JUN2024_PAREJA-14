@@ -1,11 +1,13 @@
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/proc_fs.h>
-#include <linux/sched/signal.h>
 #include <linux/seq_file.h>
 #include <linux/fs.h>
 #include <linux/sched.h>
 #include <linux/mm.h>
+#include <linux/kernel.h>
+#include <linux/uaccess.h>
+#include <linux/slab.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Eduardo Gonzalez");
@@ -37,6 +39,47 @@ static const char* state_to_string(char state) {
     }
 }
 
+// Function to read /proc/stat and calculate CPU usage
+static unsigned long long get_cpu_usage(void) {
+    struct file *file;
+    char buf[128];
+    loff_t pos = 0;
+    unsigned long long user, nice, system, idle, iowait, irq, softirq, steal;
+    unsigned long long total, busy;
+    int ret;
+
+    // Open /proc/stat
+    file = filp_open("/proc/stat", O_RDONLY, 0);
+    if (IS_ERR(file)) {
+        pr_err("Error opening /proc/stat\n");
+        return 0;
+    }
+
+    // Read the contents of /proc/stat
+    ret = kernel_read(file, buf, sizeof(buf), &pos);
+    if (ret < 0) {
+        pr_err("Error reading /proc/stat\n");
+        filp_close(file, NULL);
+        return 0;
+    }
+
+    // Close the file
+    filp_close(file, NULL);
+
+    // Parse the first line
+    sscanf(buf, "cpu  %llu %llu %llu %llu %llu %llu %llu %llu",
+           &user, &nice, &system, &idle, &iowait, &irq, &softirq, &steal);
+
+    total = user + nice + system + idle + iowait + irq + softirq + steal;
+    busy = total - idle;
+
+    if (total == 0) {
+        return 0;
+    }
+
+    return busy * 100 / total;
+}
+
 static int escribir_a_proc(struct seq_file *file_proc, void *v) {
     int running = 0;
     int sleeping = 0;
@@ -51,15 +94,11 @@ static int escribir_a_proc(struct seq_file *file_proc, void *v) {
         return -EINVAL;
     }
 
-    unsigned long total_cpu_time = 0;
-
-    for_each_process(task) {
-        total_cpu_time += task->utime + task->stime;
-    }
+    // Calculate CPU usage
+    unsigned long long cpu_usage = get_cpu_usage();
 
     //---------------------------------------------------------------------------
-    seq_printf(file_proc, "{\n\"CpuUsed\":%u,\n", jiffies_to_msecs(get_jiffies_64()));
-    seq_printf(file_proc, "\"CpuPercent\":%u,\n", (total_cpu_time * 100) / jiffies_to_msecs(get_jiffies_64()));
+    seq_printf(file_proc, "{\n\"CpuPercent\":%llu,\n", cpu_usage);
     seq_printf(file_proc, "\"processes\":[\n");
     int b = 0;
 
