@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"math"
 	"net/http"
+	"os"
 	"os/exec"
 	"strconv"
 	"strings"
+	"syscall"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
@@ -25,7 +27,7 @@ type Process struct {
 	State    int       `json:"state"`
 	RAM      int       `json:"ram"`
 	PIDPadre int       `json:"pidPadre"`
-	Children []Process `json:"children"`
+	Child    []Process `json:"child"`
 }
 
 type CPU struct {
@@ -113,47 +115,21 @@ func getRamInfo(w http.ResponseWriter, r *http.Request) {
 
 func readCpuInfo() CPU {
 	var cpuInfo CPU
-	cmd := exec.Command("sh", "-c", "cat /proc/cpu_so1_1s2024")
+
+	// Ejecutar el comando cat para obtener la salida del archivo /proc/cpu_so1_1s2024
+	cmd := exec.Command("cat", "/proc/cpu_so1_1s2024")
 	outCpu, err := cmd.Output()
 	if err != nil {
 		fmt.Println("Error al ejecutar el comando:", err)
 		return cpuInfo
 	}
-	output := string(outCpu)
-	fmt.Println("Output CpuInfo Success")
-	err = json.Unmarshal([]byte(output), &cpuInfo)
+
+	// Decodificar la salida del comando en la estructura CPU
+	err = json.Unmarshal(outCpu, &cpuInfo)
 	if err != nil {
 		fmt.Println("Error al parsear JSON:", err)
 		return cpuInfo
 	}
-
-	// Create a map to store processes by PID
-	processMap := make(map[int]*Process)
-	for i := range cpuInfo.Processes {
-		process := &cpuInfo.Processes[i]
-		process.Children = []Process{}
-		processMap[process.PID] = process
-	}
-
-	// Populate the Children field
-	for i := range cpuInfo.Processes {
-		process := &cpuInfo.Processes[i]
-		if process.PIDPadre != 0 {
-			parent, exists := processMap[process.PIDPadre]
-			if exists {
-				parent.Children = append(parent.Children, *process)
-			}
-		}
-	}
-
-	// Filter out processes that have a parent
-	var rootProcesses []Process
-	for _, process := range cpuInfo.Processes {
-		if process.PIDPadre == 0 {
-			rootProcesses = append(rootProcesses, process)
-		}
-	}
-	cpuInfo.Processes = rootProcesses
 
 	return cpuInfo
 }
@@ -170,4 +146,37 @@ func getCpuInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	// Escribir la respuesta JSON
 	w.Write(response)
+}
+
+func CreateProcess() {
+
+	// Crear un comando que ejecute un sleep infinito
+	cmd := exec.Command("sleep", "infinity")
+
+	// Asignar la salida estándar y de error del comando al mismo que el del proceso principal
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+
+	// Iniciar el comando
+	if err := cmd.Start(); err != nil {
+		fmt.Println("Error al iniciar el comando:", err)
+		return
+	}
+
+	// Obtener el PID del proceso
+	pid := cmd.Process.Pid
+	fmt.Printf("El PID del proceso es: %d\n", pid)
+
+	// Esperar a que el proceso termine (en este caso, nunca lo hará)
+	if err := cmd.Wait(); err != nil {
+		// Si el proceso termina con un error, imprimirlo
+		if exitError, ok := err.(*exec.ExitError); ok {
+			// Obtener el código de salida del proceso
+			status := exitError.Sys().(syscall.WaitStatus)
+			fmt.Printf("El proceso terminó con el código de salida: %d\n", status.ExitStatus())
+		} else {
+			fmt.Println("Error al esperar al comando:", err)
+		}
+	}
+
 }
