@@ -32,7 +32,7 @@ type Process struct {
 
 type CPU struct {
 	CpuUsed    int       `json:"CpuUsed"`
-	CpuPercent int       `json:"CpuPercent"`
+	CpuPercent float64   `json:"CpuPercent"`
 	Processes  []Process `json:"processes"`
 	Running    int       `json:"running"`
 	Sleeping   int       `json:"sleeping"`
@@ -136,15 +136,55 @@ func readCpuInfo() CPU {
 	return cpuInfo
 }
 
+func ReadPercentCpu() (float64, error) {
+	cmd, err := exec.Command("sh", "-c", "mpstat 1 1").Output()
+	if err != nil {
+		return 0, fmt.Errorf("error al ejecutar el comando: %v", err)
+	}
+
+	output := string(cmd)
+
+	lines := strings.Split(output, "\n")
+	var idleLine string
+	for _, line := range lines {
+		if strings.Contains(line, "all") {
+			idleLine = line
+			break
+		}
+	}
+
+	if idleLine == "" {
+		return 0, fmt.Errorf("no se encontró la línea con 'all'")
+	}
+
+	fields := strings.Fields(idleLine)
+
+	idleStr := fields[len(fields)-1]
+
+	idle, err := strconv.ParseFloat(idleStr, 64)
+	if err != nil {
+		return 0, fmt.Errorf("error al convertir %%idle: %v", err) // Corrección aquí para escapar el %
+	}
+
+	cpuUsed := 100.0 - idle
+	return cpuUsed, nil
+}
+
 func getCpuInfo(w http.ResponseWriter, r *http.Request) {
 	cpuInfo := readCpuInfo()
+	cpuPercent, err := ReadPercentCpu()
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	cpuInfo.CpuPercent = cpuPercent
 
 	response, err := json.Marshal(cpuInfo)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
 	w.Header().Set("Content-Type", "application/json")
 	// Escribir la respuesta JSON
 	w.Write(response)
