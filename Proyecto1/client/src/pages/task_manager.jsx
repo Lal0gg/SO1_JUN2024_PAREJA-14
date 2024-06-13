@@ -37,7 +37,7 @@ export default function TaskManager() {
 
   const GetCpuInfo = async () => {
     Service.GetInfoCpu().then((res) => {
-      let cpuUsed = res.data.CpuPercent/10000000;
+      let cpuUsed = res.data.CpuPercent;
       let cpuFree = 100 - cpuUsed;
       setProcessorData({ used: cpuUsed, free: cpuFree });
   
