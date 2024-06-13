@@ -11,13 +11,26 @@ const instance = axios.create({
 
 export const GetInfoRam = async () => {
     const res = await instance.get('ram')
-    console.log("Soy la respuesta de la api", res.data)
+    console.log("Soy la respuesta Obteniendo RamInfo", res.data)
     return res
 }
 
 
 export const GetInfoCpu = async () => {
     const res = await instance.get('cpu')
-    console.log("Soy la respuesta de la api", res.data)
+    console.log("Soy la respuesta Obteniendo CpuInfo", res.data)
+    return res
+}
+
+
+export const CreateProcess = async () => {
+    const res = await instance.post('/create-process')
+    console.log("Soy la respuesta Creando Proceso", res.data)
+    return res
+}
+
+export const KillProcess = async (pid) => {
+    const res = await instance.post('kill-process', { pid })
+    console.log("Soy la respuesta Eliminando Proceso", res.data)
     return res
 }
