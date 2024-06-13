@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"math"
 	"net/http"
+	"os"
 	"os/exec"
 	"strconv"
 	"strings"
+	"syscall"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
@@ -22,7 +24,7 @@ type Process struct {
 	PID      int       `json:"pid"`
 	Name     string    `json:"name"`
 	User     int       `json:"user"`
-	State    int       `json:"state"`
+	State    string    `json:"state"`
 	RAM      int       `json:"ram"`
 	PIDPadre int       `json:"pidPadre"`
 	Child    []Process `json:"child"`
@@ -43,6 +45,8 @@ func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/ram", getRamInfo).Methods("GET")
 	router.HandleFunc("/cpu", getCpuInfo).Methods("GET")
+	router.HandleFunc("/create-process", CreateProcess).Methods("POST")
+	router.HandleFunc("/kill-process", KillProcess).Methods("POST")
 	fmt.Println("Servidor escuchando en el puerto 8080...")
 
 	// Wrap the router with CORS support
@@ -144,4 +148,53 @@ func getCpuInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	// Escribir la respuesta JSON
 	w.Write(response)
+}
+
+func CreateProcess(w http.ResponseWriter, r *http.Request) {
+	// Crear un comando que ejecute un sleep infinito
+	cmd := exec.Command("sleep", "infinity")
+
+	// Asignar la salida estándar y de error del comando al mismo que el del proceso principal
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+
+	// Iniciar el comando
+	if err := cmd.Start(); err != nil {
+		http.Error(w, fmt.Sprintf("Error al iniciar el comando: %v", err), http.StatusInternalServerError)
+		return
+	}
+
+	// Obtener el PID del proceso
+	pid := cmd.Process.Pid
+	fmt.Printf("El PID del proceso es: %d\n", pid)
+
+	// Responder con el PID del proceso
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte(fmt.Sprintf("El PID del proceso es: %d\n", pid)))
+}
+
+func KillProcess(w http.ResponseWriter, r *http.Request) {
+	// Leer el cuerpo de la solicitud
+	var requestData map[string]int
+	if err := json.NewDecoder(r.Body).Decode(&requestData); err != nil {
+		http.Error(w, "Solicitud inválida", http.StatusBadRequest)
+		return
+	}
+
+	// Obtener el PID del proceso de la solicitud
+	pid, exists := requestData["pid"]
+	if !exists {
+		http.Error(w, "PID no proporcionado", http.StatusBadRequest)
+		return
+	}
+
+	// Matar el proceso
+	if err := syscall.Kill(pid, syscall.SIGKILL); err != nil {
+		http.Error(w, fmt.Sprintf("Error al matar el proceso: %v", err), http.StatusInternalServerError)
+		return
+	}
+
+	// Responder con el mensaje de éxito
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte(`{"message": "Proceso eliminado"}`))
 }

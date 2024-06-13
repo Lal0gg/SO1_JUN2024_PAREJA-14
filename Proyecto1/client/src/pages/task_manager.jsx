@@ -37,50 +37,13 @@ export default function TaskManager() {
 
   const GetCpuInfo = async () => {
     Service.GetInfoCpu().then((res) => {
-      let cpuUsed = res.data.CpuPercent / 1000000;
+      let cpuUsed = res.data.CpuPercent/10000000;
       let cpuFree = 100 - cpuUsed;
       setProcessorData({ used: cpuUsed, free: cpuFree });
   
-      // Verificación de estados de proceso y sus hijos
-      const updatedProcesses = res.data.processes.map(process => {
-        let state;
-        switch (process.state) {
-          case 0:
-            state = "Running";
-            break;
-          case 1:
-            state = "Sleeping";
-            break;
-          case 4:
-            state = "Zombie";
-            break;
-          default:
-            state = "Stopped";
-        }
+    
   
-        // Verificación de estados de los hijos
-        const updatedChildren = process.child.map(child => {
-          let childState;
-          switch (child.state) {
-            case 0:
-              childState = "Running";
-              break;
-            case 1:
-              childState = "Sleeping";
-              break;
-            case 4:
-              childState = "Zombie";
-              break;
-            default:
-              childState = "Stopped";
-          }
-          return { ...child, state: childState };
-        });
-  
-        return { ...process, state, child: updatedChildren };
-      });
-  
-      setProcesses(updatedProcesses);
+      setProcesses(res.data.processes);
     });
   };
   
