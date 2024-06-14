@@ -3,10 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"math"
 	"net/http"
 	"os"
 	"os/exec"
+	"server/Controller"
+	"server/Database" // Asegúrate de importar el paquete Database
 	"strconv"
 	"strings"
 	"syscall"
@@ -56,7 +59,12 @@ func main() {
 		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
 	)(router)
 
+	if err := Database.Connect(); err != nil { // Llamar a Database.Connect() en lugar de Instance.Connect()
+		log.Fatal(err)
+	}
+
 	http.ListenAndServe(":8080", corsHandler)
+
 }
 
 func readRamInfo() RAM {
@@ -113,6 +121,9 @@ func getRamInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	// Escribir la respuesta JSON
 	w.Write(response)
+
+	// Insertar datos en la base de datos
+	Controller.InsertData("ram", strconv.FormatFloat(ramInfo.RamUsed, 'f', 2, 64))
 }
 
 func readCpuInfo() CPU {

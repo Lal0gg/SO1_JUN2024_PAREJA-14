@@ -1,1 +1,0 @@
-savedcmd_/home/lal0g/Documents/U/2024/Sopes1/NiuRepo/SO1_JUN2024_PAREJA-14/Proyecto1/modules/RAM/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/lal0g/Documents/U/2024/Sopes1/NiuRepo/SO1_JUN2024_PAREJA-14/Proyecto1/modules/RAM/Module.symvers -T /home/lal0g/Documents/U/2024/Sopes1/NiuRepo/SO1_JUN2024_PAREJA-14/Proyecto1/modules/RAM/modules.order -i Module.symvers -e 
