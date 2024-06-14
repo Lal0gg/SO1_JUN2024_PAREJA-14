@@ -13,9 +13,11 @@ import (
 	"strconv"
 	"strings"
 	"syscall"
+	"time"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type RAM struct {
@@ -123,7 +125,9 @@ func getRamInfo(w http.ResponseWriter, r *http.Request) {
 	w.Write(response)
 
 	// Insertar datos en la base de datos
-	Controller.InsertData("ram", strconv.FormatFloat(ramInfo.RamUsed, 'f', 2, 64))
+	currentTime := time.Now()
+	timestamp := primitive.NewDateTimeFromTime(currentTime)
+	Controller.InsertData("ram", strconv.FormatFloat(ramInfo.RamUsed, 'f', 2, 64), timestamp)
 }
 
 func readCpuInfo() CPU {
@@ -199,6 +203,12 @@ func getCpuInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	// Escribir la respuesta JSON
 	w.Write(response)
+
+	// Insertar datos en la base de datos con fecha y hora actual
+	currentTime := time.Now()
+	timestamp := primitive.NewDateTimeFromTime(currentTime)
+	Controller.InsertData("cpu", strconv.FormatFloat(cpuPercent, 'f', 2, 64), timestamp)
+
 }
 
 func CreateProcess(w http.ResponseWriter, r *http.Request) {

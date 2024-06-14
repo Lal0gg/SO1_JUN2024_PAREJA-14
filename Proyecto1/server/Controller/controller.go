@@ -5,17 +5,16 @@ import (
 	"log"
 	"server/Instance"
 	"server/Model"
-	"time"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func InsertData(nameCol string, dataParam string) {
+func InsertData(nameCol string, dataParam string, timestamp primitive.DateTime) {
 	collection := Instance.Mg.Db.Collection(nameCol)
 	doc := Model.Data{
-		ID:        primitive.NewObjectID(), // Generar un nuevo ObjectID
+		ID:        primitive.NewObjectID(),
 		Percent:   dataParam,
-		Timestamp: primitive.NewDateTimeFromTime(time.Now()), // Añadir el timestamp actual
+		Timestamp: timestamp,
 	}
 
 	_, err := collection.InsertOne(context.TODO(), doc)
