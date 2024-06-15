@@ -20,7 +20,9 @@ func InsertData(nameCol string, dataParam string, timestamp primitive.DateTime) 
 
 	_, err := collection.InsertOne(context.TODO(), doc)
 	if err != nil {
-		log.Fatal(err)
+		log.Println("Error al insertar datos:", err)
+	} else {
+		log.Println("Datos insertados correctamente en la colección:", nameCol)
 	}
 }
 
