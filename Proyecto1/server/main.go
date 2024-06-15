@@ -9,8 +9,7 @@ import (
 	"os"
 	"os/exec"
 	"server/Controller"
-	"server/Database" // Asegúrate de importar el paquete Database
-
+	"server/Database"
 	"server/Model"
 	"strconv"
 	"strings"
@@ -63,12 +62,11 @@ func main() {
 		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
 	)(router)
 
-	if err := Database.Connect(); err != nil { // Llamar a Database.Connect() en lugar de Instance.Connect()
+	if err := Database.Connect(); err != nil {
 		log.Fatal(err)
 	}
 
 	http.ListenAndServe(":8080", corsHandler)
-
 }
 
 func readRamInfo() RAM {
@@ -123,7 +121,6 @@ func getRamInfo(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	// Escribir la respuesta JSON
 	w.Write(response)
 
 	// Insertar datos en la base de datos
@@ -133,7 +130,6 @@ func getRamInfo(w http.ResponseWriter, r *http.Request) {
 func readCpuInfo() CPU {
 	var cpuInfo CPU
 
-	// Ejecutar el comando cat para obtener la salida del archivo /proc/cpu_so1_1s2024
 	cmd := exec.Command("cat", "/proc/cpu_so1_1s2024")
 	outCpu, err := cmd.Output()
 	if err != nil {
@@ -141,7 +137,6 @@ func readCpuInfo() CPU {
 		return cpuInfo
 	}
 
-	// Decodificar la salida del comando en la estructura CPU
 	err = json.Unmarshal(outCpu, &cpuInfo)
 	if err != nil {
 		fmt.Println("Error al parsear JSON:", err)
@@ -178,7 +173,7 @@ func ReadPercentCpu() (float64, error) {
 
 	idle, err := strconv.ParseFloat(idleStr, 64)
 	if err != nil {
-		return 0, fmt.Errorf("error al convertir %%idle: %v", err) // Corrección aquí para escapar el %
+		return 0, fmt.Errorf("error al convertir %%idle: %v", err)
 	}
 
 	cpuUsed := 100.0 - idle
@@ -201,11 +196,14 @@ func getCpuInfo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
-	// Escribir la respuesta JSON
 	w.Write(response)
 
 	timestamp := primitive.NewDateTimeFromTime(time.Now())
-	// Insertar procesos principales
+
+	// Insertar datos de CPU en la base de datos
+	Controller.InsertData("cpu", strconv.FormatFloat(cpuPercent, 'f', 2, 64), timestamp)
+
+	// Insertar datos de procesos en la base de datos
 	for _, process := range cpuInfo.Processes {
 		procData := Model.ProcessData{
 			ID:        primitive.NewObjectID(),
@@ -240,50 +238,41 @@ func insertChildProcesses(children []Process, parentPID int, timestamp primitive
 }
 
 func CreateProcess(w http.ResponseWriter, r *http.Request) {
-	// Crear un comando que ejecute un sleep infinito
 	cmd := exec.Command("sleep", "infinity")
 
-	// Asignar la salida estándar y de error del comando al mismo que el del proceso principal
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
-	// Iniciar el comando
 	if err := cmd.Start(); err != nil {
 		http.Error(w, fmt.Sprintf("Error al iniciar el comando: %v", err), http.StatusInternalServerError)
 		return
 	}
 
-	// Obtener el PID del proceso
 	pid := cmd.Process.Pid
 	fmt.Printf("El PID del proceso es: %d\n", pid)
 
-	// Responder con el PID del proceso
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(fmt.Sprintf("El PID del proceso es: %d\n", pid)))
 }
 
 func KillProcess(w http.ResponseWriter, r *http.Request) {
-	// Leer el cuerpo de la solicitud
 	var requestData map[string]int
 	if err := json.NewDecoder(r.Body).Decode(&requestData); err != nil {
 		http.Error(w, "Solicitud inválida", http.StatusBadRequest)
 		return
 	}
 
-	// Obtener el PID del proceso de la solicitud
 	pid, exists := requestData["pid"]
 	if !exists {
 		http.Error(w, "PID no proporcionado", http.StatusBadRequest)
 		return
 	}
 
-	// Matar el proceso
 	if err := syscall.Kill(pid, syscall.SIGKILL); err != nil {
 		http.Error(w, fmt.Sprintf("Error al matar el proceso: %v", err), http.StatusInternalServerError)
 		return
 	}
 
-	// Responder con el mensaje de éxito
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(`{"message": "Proceso eliminado"}`))
 }
