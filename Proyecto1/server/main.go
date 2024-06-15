@@ -10,12 +10,16 @@ import (
 	"os/exec"
 	"server/Controller"
 	"server/Database" // Asegúrate de importar el paquete Database
+
+	"server/Model"
 	"strconv"
 	"strings"
 	"syscall"
+	"time"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type RAM struct {
@@ -123,7 +127,7 @@ func getRamInfo(w http.ResponseWriter, r *http.Request) {
 	w.Write(response)
 
 	// Insertar datos en la base de datos
-	Controller.InsertData("ram", strconv.FormatFloat(ramInfo.RamUsed, 'f', 2, 64))
+	Controller.InsertData("ram", strconv.Itoa(int(ramInfo.RamUsed)), primitive.NewDateTimeFromTime(time.Now()))
 }
 
 func readCpuInfo() CPU {
@@ -199,6 +203,40 @@ func getCpuInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	// Escribir la respuesta JSON
 	w.Write(response)
+
+	timestamp := primitive.NewDateTimeFromTime(time.Now())
+	// Insertar procesos principales
+	for _, process := range cpuInfo.Processes {
+		procData := Model.ProcessData{
+			ID:        primitive.NewObjectID(),
+			PID:       process.PID,
+			Name:      process.Name,
+			State:     process.State,
+			PIDPadre:  0, // Proceso principal no tiene padre
+			Timestamp: timestamp,
+		}
+		Controller.InsertProcessData(procData)
+
+		// Insertar procesos hijos
+		insertChildProcesses(process.Child, process.PID, timestamp)
+	}
+}
+
+func insertChildProcesses(children []Process, parentPID int, timestamp primitive.DateTime) {
+	for _, child := range children {
+		procData := Model.ProcessData{
+			ID:        primitive.NewObjectID(),
+			PID:       child.PID,
+			Name:      child.Name,
+			State:     child.State,
+			PIDPadre:  parentPID,
+			Timestamp: timestamp,
+		}
+		Controller.InsertProcessData(procData)
+
+		// Recursivamente insertar hijos de los hijos
+		insertChildProcesses(child.Child, child.PID, timestamp)
+	}
 }
 
 func CreateProcess(w http.ResponseWriter, r *http.Request) {

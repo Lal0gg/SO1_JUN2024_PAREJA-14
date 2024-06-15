@@ -10,15 +10,31 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func InsertData(nameCol string, dataParam string) {
+func InsertData(nameCol string, dataParam string, timestamp primitive.DateTime) {
 	collection := Instance.Mg.Db.Collection(nameCol)
 	doc := Model.Data{
-		ID:        primitive.NewObjectID(), // Generar un nuevo ObjectID
+		ID:        primitive.NewObjectID(),
 		Percent:   dataParam,
-		Timestamp: primitive.NewDateTimeFromTime(time.Now()), // Añadir el timestamp actual
+		Timestamp: timestamp,
 	}
 
 	_, err := collection.InsertOne(context.TODO(), doc)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func InsertProcessData(process Model.ProcessData) {
+	collection := Instance.Mg.Db.Collection("process")
+
+	process.ID = primitive.NewObjectID()
+	process.Timestamp = primitive.NewDateTimeFromTime(time.Now())
+
+	if process.PIDPadre == 0 {
+		process.PIDPadre = 0
+	}
+
+	_, err := collection.InsertOne(context.TODO(), process)
 	if err != nil {
 		log.Fatal(err)
 	}
