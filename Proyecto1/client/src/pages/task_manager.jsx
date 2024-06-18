@@ -13,7 +13,6 @@ export default function TaskManager() {
   const [processes, setProcesses] = useState([]);
   const [pid, setPid] = useState('');
 
-
   const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -24,9 +23,12 @@ export default function TaskManager() {
   };
 
   const GetRamInfo = async () => {
-    Service.GetInfoRam().then((res) => {
-      setRamData({ used: res.data.RamUsed, free: res.data.RamFree });
-    });
+    try {
+      const data = await Service.GetInfoRam();
+      setRamData({ used: data.RamUsed, free: data.RamFree });
+    } catch (error) {
+      console.error("Error al obtener información de RAM:", error);
+    }
   };
 
   useEffect(() => {
@@ -38,27 +40,27 @@ export default function TaskManager() {
   }, []);
 
   const GetCpuInfo = async () => {
-    Service.GetInfoCpu().then((res) => {
-      let cpuUsed = res.data.CpuPercent.toFixed(2);
+    try {
+      const data = await Service.GetInfoCpu();
+      let cpuUsed = data.CpuPercent.toFixed(2);
       let cpuFree = 100 - cpuUsed;
       setProcessorData({ used: cpuUsed, free: cpuFree });
-  
-    
-  
-      setProcesses(res.data.processes);
-    });
-  };
-  //33103
-  //34592
-  const Createprocess = async () => {
-    Service.CreateProcess().then((res) => {
-      console.log("Entrando")
-      console.log(res.data);
-      alert(res.data)
+      setProcesses(data.processes);
+    } catch (error) {
+      console.error("Error al obtener información de CPU:", error);
     }
-  );
-  
-  }
+  };
+
+  const Createprocess = async () => {
+    try {
+      const data = await Service.CreateProcess();
+      console.log("Proceso creado:", data);
+      alert(`Proceso creado con PID: ${data.pid_create}`);
+    } catch (error) {
+      console.error("Error al crear el proceso:", error);
+      alert("Error al crear el proceso. Por favor, revisa la consola para más detalles.");
+    }
+  };
 
   const KillProcesss = async () => {
     try {
@@ -71,7 +73,6 @@ export default function TaskManager() {
       alert("Error al matar el proceso. Por favor, revisa la consola para más detalles.");
     }
   };
-  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -81,7 +82,6 @@ export default function TaskManager() {
     return () => clearInterval(interval);
   }, []);
 
-  
   const ramOptions = {
     tooltip: {
       trigger: 'item'
@@ -201,11 +201,7 @@ export default function TaskManager() {
   };
 
   const handleMessageInputChange = (e) => {
-    setPid(event.target.value);
-  };
-
-  const handleSendMessageClick = () => {
-    // Manejar el clic en el botón de enviar aquí
+    setPid(e.target.value);
   };
 
   return (
@@ -241,7 +237,7 @@ export default function TaskManager() {
                 <input type="button" id="file" name="file" onClick={Createprocess} />
               </div>
               <div className="inputWithButtons">
-                <input required placeholder="PID..."  id="pid" value={pid} onChange={handleMessageInputChange} />
+                <input required placeholder="PID..." id="pid" value={pid} onChange={handleMessageInputChange} />
               </div>
               <button id="sendButton" onClick={KillProcesss}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
@@ -268,7 +264,7 @@ export default function TaskManager() {
                       <td>{process.pid}</td>
                       <td>{process.name}</td>
                       <td>{process.state}</td>
-                      <td>{process.ram+" KB"}</td>
+                      <td>{process.ram} KB</td>
                     </tr>
                     {expandedRows.includes(index) && process.child && (
                       <tr>
@@ -290,7 +286,7 @@ export default function TaskManager() {
                                 </tr>
                               ))}
                             </tbody>
-                          </table>      
+                          </table>
                         </td>
                       </tr>
                     )}
