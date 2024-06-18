@@ -8,9 +8,6 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
-	"server/Controller"
-	"server/Database"
-	"server/Model"
 	"strconv"
 	"strings"
 	"syscall"
@@ -19,6 +16,10 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+
+	"server/Controller"
+	"server/Database"
+	"server/Model"
 )
 
 type RAM struct {
@@ -49,11 +50,11 @@ type CPU struct {
 
 func main() {
 	router := mux.NewRouter()
-	router.HandleFunc("/ram", getRamInfo).Methods("GET")
-	router.HandleFunc("/cpu", getCpuInfo).Methods("GET")
-	router.HandleFunc("/create-process", CreateProcess).Methods("POST")
-	router.HandleFunc("/kill-process", KillProcess).Methods("POST")
-	fmt.Println("Servidor escuchando en el puerto 8080...")
+	router.HandleFunc("/sopes1/ram", getRamInfo).Methods("GET")
+	router.HandleFunc("/sopes1/cpu", getCpuInfo).Methods("GET")
+	router.HandleFunc("/sopes1/create-process", CreateProcess).Methods("POST")
+	router.HandleFunc("/sopes1/kill-process", KillProcess).Methods("POST")
+	fmt.Println("Servidor escuchando en el puerto 3000...")
 
 	// Wrap the router with CORS support
 	corsHandler := handlers.CORS(
@@ -66,7 +67,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	http.ListenAndServe(":8080", corsHandler)
+	http.ListenAndServe(":3000", corsHandler)
 }
 
 func readRamInfo() RAM {
@@ -251,8 +252,22 @@ func CreateProcess(w http.ResponseWriter, r *http.Request) {
 	pid := cmd.Process.Pid
 	fmt.Printf("El PID del proceso es: %d\n", pid)
 
+	// Crear una respuesta JSON con el PID del proceso
+	response := map[string]interface{}{
+		"pid_create": pid,
+	}
+
+	// Convertir la respuesta a JSON
+	jsonResponse, err := json.Marshal(response)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("Error al crear la respuesta JSON: %v", err), http.StatusInternalServerError)
+		return
+	}
+
+	// Escribir la respuesta JSON
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(fmt.Sprintf("El PID del proceso es: %d\n", pid)))
+	w.Write(jsonResponse)
 }
 
 func KillProcess(w http.ResponseWriter, r *http.Request) {
