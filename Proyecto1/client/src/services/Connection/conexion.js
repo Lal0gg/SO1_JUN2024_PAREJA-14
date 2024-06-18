@@ -1,36 +1,70 @@
-import axios from 'axios'
-
-
-// api para la conexion con el backend
-
-const instance = axios.create({
-    baseURL: 'http://127.0.0.1:8080/',
-});
-
-
-
 export const GetInfoRam = async () => {
-    const res = await instance.get('ram')
-    console.log("Soy la respuesta Obteniendo RamInfo", res.data)
-    return res
+    try {
+        const response = await fetch(`/sopes1/ram`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log("Soy la respuesta Obteniendo RamInfo", data);
+        return data;
+    } catch (error) {
+        console.error("Error al obtener información de RAM:", error);
+        throw error;
+    }
 }
-
 
 export const GetInfoCpu = async () => {
-    const res = await instance.get('cpu')
-    console.log("Soy la respuesta Obteniendo CpuInfo", res.data)
-    return res
+    try {
+        const response = await fetch(`/sopes1/cpu`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log("Soy la respuesta Obteniendo CpuInfo", data);
+        return data;
+    } catch (error) {
+        console.error("Error al obtener información de CPU:", error);
+        throw error;
+    }
 }
 
-
 export const CreateProcess = async () => {
-    const res = await instance.post('/create-process')
-    console.log("Soy la respuesta Creando Proceso", res.data)
-    return res
+    try {
+        const response = await fetch(`/sopes1/create-process`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log("Soy la respuesta Creando Proceso", data);
+        return data;
+    } catch (error) {
+        console.error("Error al crear proceso:", error);
+        throw error;
+    }
 }
 
 export const KillProcess = async (pid) => {
-    const res = await instance.post('kill-process', { pid })
-    console.log("Soy la respuesta Eliminando Proceso", res.data)
-    return res
+    try {
+        const response = await fetch(`/sopes1/kill-process`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ pid })
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log("Soy la respuesta Eliminando Proceso", data);
+        return data;
+    } catch (error) {
+        console.error("Error al eliminar proceso:", error);
+        throw error;
+    }
 }
