@@ -22,7 +22,7 @@
 4. [🖥 Flujo de la aplicación](#)
     - [Comandos Utilizados](#-comandos-utilizados) 
     - [Flujo de proyecto](#-flujo-de-proyecto)
-    - [Aplicacion web](#)
+    - [Aplicacion web](#-aplicacion-web)
 # 🎯 Objetivo del Proyecto
 
 Implementar una plataforma integral de monitoreo de recursos del sistema y gestión de procesos en tiempo real, utilizando tecnologías y lenguajes de programación modernos, para proporcionar una interfaz amigable y eficiente que permita a los usuarios obtener y administrar información clave sobre el rendimiento del sistema y los procesos en ejecución, desplegada en un entorno de máquina virtual sin interfaz gráfica.
