@@ -28,7 +28,7 @@
 Implementar una plataforma integral de monitoreo de recursos del sistema y gestión de procesos en tiempo real, utilizando tecnologías y lenguajes de programación modernos, para proporcionar una interfaz amigable y eficiente que permita a los usuarios obtener y administrar información clave sobre el rendimiento del sistema y los procesos en ejecución, desplegada en un entorno de máquina virtual sin interfaz gráfica.
 
 # 👷🏻 Arquitectura del Proyecto
-![Arquitectura del Proyecto](../images/arquitectura.png)
+![Arquitectura del Proyecto](./images/arquitectura.png)
 # 📍 Tecnologías
 
 #### Estas son las tecnologías y herramientas utilizadas en el proyecto:
@@ -371,3 +371,23 @@ sudo apt install sysstat
 #### - 📃 [Iniciar la aplicación web fuera de la maquina virtual, en el host de Ubuntu y monitorear el uso de `CPU` y `RAM` además de la creación y eliminación de procesos y hacer pruebas de `stress`](#)
 
 # 🌐 Aplicacion web
+
+#### 🏠 Home
+![Home](./images/home.png)
+
+#### 📊 Task Manager
+![Task Manager](./images/processM.png)
+
+#### 📝 Tasks
+
+![Tasks](./images/Tasks.png)
+
+![Tasks](./images/Tasks2.png)
+
+#### ✍🏼 Create Process
+
+![Create Process](./images/createprocess.png)
+
+#### 🗑😵 Kill Process
+
+![Kill Process](./images/eliminateP2.png)

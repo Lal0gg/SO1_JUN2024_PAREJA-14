@@ -8,4 +8,4 @@
 
 - ### 👨‍💻 Proyectos
     - [`👨‍💻 Proyecto 1`](./Proyectos/Proyecto1/)
-    - [`👨‍💻 Proyecto 2`](./)
+    - [`👨‍💻 Proyecto 2`](./Proyectos/Proyecto2/)
