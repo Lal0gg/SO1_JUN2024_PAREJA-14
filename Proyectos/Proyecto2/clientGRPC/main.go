@@ -1,14 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 
-	"github.com/gorilla/handlers"
-	"github.com/gorilla/mux"
+	"github.com/gofiber/fiber/v2"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
@@ -18,45 +19,60 @@ import (
 var ctx = context.Background()
 
 type Data struct {
-	Texto string `json:"texto"`
-	Pais  string `json:"pais"`
+	Texto string
+	Pais  string
 }
 
-func main() {
-	router := mux.NewRouter()
-	router.HandleFunc("/sendData", sendData).Methods("POST")
-	fmt.Println("Server is running on port 3000...")
-
-	corsHandler := handlers.CORS(
-		handlers.AllowedOrigins([]string{"*"}),
-		handlers.AllowedMethods([]string{"GET", "POST", "OPTIONS"}),
-		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
-	)(router)
-
-	log.Fatal(http.ListenAndServe(":3000", corsHandler))
-}
-
-func sendData(w http.ResponseWriter, r *http.Request) {
-	var data Data
-	err := json.NewDecoder(r.Body).Decode(&data)
+func sendToRust(data *Data) {
+	jsonData, err := json.Marshal(data)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
+		log.Fatal(err)
 	}
 
-	tweet := map[string]string{
-		"texto": data.Texto,
-		"pais":  data.Pais,
+	res, err := http.Post("http://localhost:8000/set", "application/json", bytes.NewBuffer(jsonData))
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}(res.Body)
+
+	if res.StatusCode != http.StatusOK {
+		log.Fatalf("status code error: %d %s", res.StatusCode, res.Status)
+	}
+}
+
+func sendData(c *fiber.Ctx) error {
+	/* API REST */
+	var data map[string]string
+	e := c.BodyParser(&data)
+	if e != nil {
+		return e
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(tweet)
+	tweet := Data{
+		Texto: data["texto"],
+		Pais:  data["pais"],
+	}
 
-	conn, err := grpc.Dial("localhost:3001", grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithBlock())
+	go sendGrpcServer(tweet)
+	go sendToRust(&tweet)
+
+	return nil
+}
+
+func sendGrpcServer(tweet Data) {
+	/* GRPC Client */
+	conn, err := grpc.Dial("localhost:3001", grpc.WithTransportCredentials(insecure.NewCredentials()),
+		grpc.WithBlock())
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
-		return
 	}
+
+	cl := pb.NewGetInfoClient(conn)
 	defer func(conn *grpc.ClientConn) {
 		err := conn.Close()
 		if err != nil {
@@ -64,17 +80,24 @@ func sendData(w http.ResponseWriter, r *http.Request) {
 		}
 	}(conn)
 
-	cl := pb.NewGetInfoClient(conn)
-
 	ret, err := cl.ReturnInfo(ctx, &pb.RequestId{
-		Texto: tweet["texto"],
-		Pais:  tweet["pais"],
+		Texto: tweet.Texto,
+		Pais:  tweet.Pais,
 	})
-
 	if err != nil {
-		log.Fatalf("could not get info: %v", err)
-		return
+		log.Fatal(err)
+	} else {
+		fmt.Println("Respuesta del servidor ", ret)
 	}
+}
 
-	log.Printf("Received from gRPC server: %v", ret)
+func main() {
+	app := fiber.New()
+
+	app.Post("/insert", sendData)
+
+	err := app.Listen(":3000")
+	if err != nil {
+		log.Fatal(err)
+	}
 }
