@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: 34.121.114.9.nip.io
+  - host: <IpLoadBalancernginxcontroller>.nip.io
     http:
       paths:
       - pathType: Prefix
