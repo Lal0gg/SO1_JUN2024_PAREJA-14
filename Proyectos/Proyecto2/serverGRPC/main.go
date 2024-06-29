@@ -7,6 +7,8 @@ import (
 
 	"google.golang.org/grpc"
 
+	"serverGRPC/kafka"
+	"serverGRPC/model"
 	pb "serverGRPC/server"
 )
 
@@ -21,14 +23,15 @@ type Data struct {
 
 func (s *server) ReturnInfo(ctx context.Context, in *pb.RequestId) (*pb.ReplyInfo, error) {
 
-	tweet := map[string]string{
-		"texto": in.GetTexto(),
-		"pais":  in.GetPais(),
+	tweet := model.Data{
+		Texto: in.GetTexto(),
+		Pais:  in.GetPais(),
 	}
 
-	fmt.Println("El cliente recibio el album: ", tweet)
+	fmt.Println(tweet)
+	kafka.Produce(tweet)
 
-	return &pb.ReplyInfo{Info: "Hola client, recibi el album"}, nil
+	return &pb.ReplyInfo{Info: "Hola client, recibi el tuit"}, nil
 
 }
 func main() {
