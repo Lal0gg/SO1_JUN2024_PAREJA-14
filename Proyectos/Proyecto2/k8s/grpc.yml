@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: grpc-client
-        image: lalogg/p2_so1_p14_clientgrpc:1.0.0
+        image: lalogg/p2_so1_p14_clientgrpc:4.0.0
         ports:
         - containerPort: 3000
         resources:
@@ -26,6 +26,14 @@ spec:
         image: lalogg/p2_so1_p14_servergrpc:2.0.0
         ports:
         - containerPort: 3001
+        resources:
+          limits:
+            cpu: "0.4"
+            memory: "500Mi"
+      - name: rust-api
+        image: lalogg/p2_so1_p14_redis_rust:4.0.0
+        ports:
+        - containerPort: 8000
         resources:
           limits:
             cpu: "0.4"
