@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-producer
+  namespace: so1-p14
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-producer
+  template:
+    metadata:
+      labels:
+        app: grpc-producer
+    spec:
+      containers:
+      - name: grpc-client
+        image: lalogg/p2_so1_p14_clientgrpc:4.0.0
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: "0.4"
+            memory: "500Mi"
+      - name: grpc-server
+        image: lalogg/p2_so1_p14_servergrpc:2.0.0
+        ports:
+        - containerPort: 3001
+        resources:
+          limits:
+            cpu: "0.4"
+            memory: "500Mi"
+      - name: rust-api
+        image: lalogg/p2_so1_p14_redis_rust:7.0.0
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            cpu: "0.4"
+            memory: "500Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-client-service
+  namespace: so1-p14
+spec:
+  selector:
+    app: grpc-producer
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  type: ClusterIP
