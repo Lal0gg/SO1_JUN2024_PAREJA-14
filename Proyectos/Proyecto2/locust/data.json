@@ -1,2530 +1,802 @@
 [
-    {
-        "texto": "Hace mucho calor pe causa",
-        "pais": "Peru"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Brasil"
-    },
-    {
-        "texto": "Nieve en las montañas",
-        "pais": "Argentina"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Colombia"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Chile"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Francia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Países Bajos"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Alemania"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Canada"
-    },
-    {
-        "texto": "Paseo en barco",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Safari de animales",
-        "pais": "Sudáfrica"
-    },
-    {
-        "texto": "Trekking en el bosque",
-        "pais": "Peru"
-    },
-    {
-        "texto": "Mercado nocturno",
-        "pais": "Tailandia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Japón"
-    },
-    {
-        "texto": "Vista de la ciudad",
-        "pais": "Hong Kong"
-    },
-    {
-        "texto": "Maratón anual",
-        "pais": "Nueva York"
-    },
-    {
-        "texto": "Concierto al aire libre",
-        "pais": "Reino Unido"
-    },
-    {
-        "texto": "Cine bajo las estrellas",
-        "pais": "Mexico"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Mercado de flores",
-        "pais": "Países Bajos"
-    },
-    {
-        "texto": "Parque de diversiones",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Partido de futbol",
-        "pais": "Brasil"
-    },
-    {
-        "texto": "Escapada a la montaña",
-        "pais": "Suiza"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Egipto"
-    },
-    {
-        "texto": "Puente iconico",
-        "pais": "Portugal"
-    },
-    {
-        "texto": "Feria local",
-        "pais": "Argentina"
-    },
-    {
-        "texto": "Torre famosa",
-        "pais": "Francia"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cascada impresionante",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Volcan activo",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Ruinas antiguas",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Mercado colorido",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Parque nacional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Lago espectacular",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Catedral historica",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Fiesta tradicional",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Bosque nuboso",
-        "pais": "Guatemala"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Caminata en el parque",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Hermoso atardecer",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Amanecer en la playa",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Festival cultural",
-        "pais": "Espana"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Desierto misterioso",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Templo antiguo",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Comida deliciosa",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Museos increibles",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Paseo en gondola",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Ruta en bicicleta",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Navegando el rio",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Cafe en la ciudad",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Visita al zoologico",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Tarde de picnic",
-        "pais": "Italia"
-    },
-    {
-        "texto": "Frente frío acercándose",
-        "pais": "Brasil"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Mali"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Burkina Faso"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Letonia"
-    },
-    {
-        "texto": "Viento frío del norte",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Costa Rica"
-    },
-    {
-        "texto": "Tormenta de verano repentina",
-        "pais": "Laos"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Canadá"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Letonia"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Argentina"
-    },
-    {
-        "texto": "Hace mucho viento hoy",
-        "pais": "Mali"
-    },
-    {
-        "texto": "Tormenta de verano repentina",
-        "pais": "Senegal"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Malasia"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "España"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Mozambique"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Fiyi"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Ghana"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Canadá"
-    },
-    {
-        "texto": "Calor sofocante en la ciudad",
-        "pais": "Senegal"
-    },
-    {
-        "texto": "Nubes oscuras de tormenta",
-        "pais": "Arabia Saudita"
-    },
-    {
-        "texto": "Clima cambiante constantemente",
-        "pais": "Países Bajos"
-    },
-    {
-        "texto": "Viento frío del norte",
-        "pais": "Senegal"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Camboya"
-    },
-    {
-        "texto": "Hace mucho viento hoy",
-        "pais": "Yemen"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Argentina"
-    },
-    {
-        "texto": "Frente frío acercándose",
-        "pais": "Albania"
-    },
-    {
-        "texto": "Tormenta de verano repentina",
-        "pais": "Liberia"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Ghana"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Malasia"
-    },
-    {
-        "texto": "Huracán en la región",
-        "pais": "Nepal"
-    },
-    {
-        "texto": "Aroma a tierra mojada después de la lluvia",
-        "pais": "Pakistán"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Vietnam"
-    },
-    {
-        "texto": "Clima cambiante constantemente",
-        "pais": "China"
-    },
-    {
-        "texto": "Tarde soleada y tranquila",
-        "pais": "Belice"
-    },
-    {
-        "texto": "Lluvia ligera y persistente",
-        "pais": "Albania"
-    },
-    {
-        "texto": "Paisaje cubierto de nieve",
-        "pais": "Nicaragua"
-    },
-    {
-        "texto": "Tormenta de verano repentina",
-        "pais": "Tanzania"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Turquía"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Papúa Nueva Guinea"
-    },
-    {
-        "texto": "Me encanta la lluvia",
-        "pais": "Iraq"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Camboya"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Sudán"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Qatar"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Países Bajos"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Vietnam"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Bolivia"
-    },
-    {
-        "texto": "Aroma a tierra mojada después de la lluvia",
-        "pais": "Chad"
-    },
-    {
-        "texto": "Hace mucho viento hoy",
-        "pais": "Dinamarca"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Pakistán"
-    },
-    {
-        "texto": "Nubes oscuras de tormenta",
-        "pais": "China"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Alemania"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Ruanda"
-    },
-    {
-        "texto": "Lluvia ligera y persistente",
-        "pais": "Bolivia"
-    },
-    {
-        "texto": "Frío intenso esta semana",
-        "pais": "Canadá"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "España"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Tailandia"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Brasil"
-    },
-    {
-        "texto": "Nubes oscuras de tormenta",
-        "pais": "Tailandia"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Canadá"
-    },
-    {
-        "texto": "Huracán en la región",
-        "pais": "Colombia"
-    },
-    {
-        "texto": "Lluvia ligera y persistente",
-        "pais": "Surinam"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Indonesia"
-    },
-    {
-        "texto": "Heladas matinales en invierno",
-        "pais": "España"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Suecia"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Sudáfrica"
-    },
-    {
-        "texto": "Tarde soleada y tranquila",
-        "pais": "Laos"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Noruega"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Qatar"
-    },
-    {
-        "texto": "Tormenta intensa esta noche",
-        "pais": "Bolivia"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Honduras"
-    },
-    {
-        "texto": "Huracán en la región",
-        "pais": "Panamá"
-    },
-    {
-        "texto": "Tormenta intensa esta noche",
-        "pais": "Honduras"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Vietnam"
-    },
-    {
-        "texto": "Frío intenso esta semana",
-        "pais": "Corea del Sur"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Nubes oscuras de tormenta",
-        "pais": "Ghana"
-    },
-    {
-        "texto": "Nubes oscuras de tormenta",
-        "pais": "Colombia"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Liberia"
-    },
-    {
-        "texto": "Clima cambiante constantemente",
-        "pais": "Papúa Nueva Guinea"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Argentina"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Honduras"
-    },
-    {
-        "texto": "Clima cambiante constantemente",
-        "pais": "Canadá"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Uganda"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Mozambique"
-    },
-    {
-        "texto": "Viento frío del norte",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Paisaje cubierto de nieve",
-        "pais": "Tailandia"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Angola"
-    },
-    {
-        "texto": "Frente frío acercándose",
-        "pais": "Belice"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Jamaica"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Cabo Verde"
-    },
-    {
-        "texto": "Frío intenso esta semana",
-        "pais": "Letonia"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Corea del Sur"
-    },
-    {
-        "texto": "Paisaje cubierto de nieve",
-        "pais": "Chile"
-    },
-    {
-        "texto": "Tormenta de verano repentina",
-        "pais": "Angola"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Chile"
-    },
-    {
-        "texto": "Tarde soleada y tranquila",
-        "pais": "Chile"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Malasia"
-    },
-    {
-        "texto": "Calor sofocante en la ciudad",
-        "pais": "Siria"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Corea del Sur"
-    },
-    {
-        "texto": "Calor sofocante en la ciudad",
-        "pais": "Grecia"
-    },
-    {
-        "texto": "Huracán en la región",
-        "pais": "Irán"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Nepal"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Colombia"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Benín"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Finlandia"
-    },
-    {
-        "texto": "Paisaje cubierto de nieve",
-        "pais": "Ucrania"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Grecia"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Uganda"
-    },
-    {
-        "texto": "Me encanta la lluvia",
-        "pais": "Kenia"
-    },
-    {
-        "texto": "Tarde soleada y tranquila",
-        "pais": "Vietnam"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Kenia"
-    },
-    {
-        "texto": "Nubes oscuras de tormenta",
-        "pais": "Zambia"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Ucrania"
-    },
-    {
-        "texto": "Viento frío del norte",
-        "pais": "Fiyi"
-    },
-    {
-        "texto": "Me encanta la lluvia",
-        "pais": "Nueva Zelanda"
-    },
-    {
-        "texto": "Viento frío del norte",
-        "pais": "Iraq"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Egipto"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Pakistán"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Chile"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "India"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Senegal"
-    },
-    {
-        "texto": "Calor sofocante en la ciudad",
-        "pais": "Reino Unido"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Arabia Saudita"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Zimbabue"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Corea del Sur"
-    },
-    {
-        "texto": "Lluvia ligera y persistente",
-        "pais": "Suecia"
-    },
-    {
-        "texto": "Tarde soleada y tranquila",
-        "pais": "Ucrania"
-    },
-    {
-        "texto": "Frente frío acercándose",
-        "pais": "Namibia"
-    },
-    {
-        "texto": "Calor sofocante en la ciudad",
-        "pais": "Malasia"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Iraq"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Suiza"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Mongolia"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Camboya"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Mauritania"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Filipinas"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Kenia"
-    },
-    {
-        "texto": "Lluvia ligera y persistente",
-        "pais": "Irán"
-    },
-    {
-        "texto": "Paisaje cubierto de nieve",
-        "pais": "Albania"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Burundi"
-    },
-    {
-        "texto": "Aroma a tierra mojada después de la lluvia",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Granizo inesperado",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Lluvia ligera y persistente",
-        "pais": "Papúa Nueva Guinea"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Belice"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Finlandia"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Belice"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Belice"
-    },
-    {
-        "texto": "Granizo inesperado",
-        "pais": "Irán"
-    },
-    {
-        "texto": "Calor sofocante en la ciudad",
-        "pais": "Pakistán"
-    },
-    {
-        "texto": "Aroma a tierra mojada después de la lluvia",
-        "pais": "Iraq"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Ucrania"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Tailandia"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Somalia"
-    },
-    {
-        "texto": "Noche estrellada y despejada",
-        "pais": "Mongolia"
-    },
-    {
-        "texto": "Heladas matinales en invierno",
-        "pais": "Afganistán"
-    },
-    {
-        "texto": "Granizo inesperado",
-        "pais": "Ucrania"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Nepal"
-    },
-    {
-        "texto": "Paisaje cubierto de nieve",
-        "pais": "Colombia"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Burundi"
-    },
-    {
-        "texto": "Me encanta la lluvia",
-        "pais": "Ecuador"
-    },
-    {
-        "texto": "Aroma a tierra mojada después de la lluvia",
-        "pais": "Mongolia"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Reino Unido"
-    },
-    {
-        "texto": "Tormenta intensa esta noche",
-        "pais": "Dinamarca"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Bolivia"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Dinamarca"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Pakistán"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Nueva Zelanda"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Namibia"
-    },
-    {
-        "texto": "Calor sofocante",
-        "pais": "Yemen"
-    },
-    {
-        "texto": "Viento frío del norte",
-        "pais": "Somalia"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Liberia"
-    },
-    {
-        "texto": "Nubes oscuras de tormenta",
-        "pais": "Camboya"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Sudáfrica"
-    },
-    {
-        "texto": "Huracán en la región",
-        "pais": "Países Bajos"
-    },
-    {
-        "texto": "Calor sofocante en la ciudad",
-        "pais": "Arabia Saudita"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Belice"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Omán"
-    },
-    {
-        "texto": "Frente frío acercándose",
-        "pais": "Nueva Zelanda"
-    },
-    {
-        "texto": "Hace mucho viento hoy",
-        "pais": "Malasia"
-    },
-    {
-        "texto": "Me encanta la lluvia",
-        "pais": "Arabia Saudita"
-    },
-    {
-        "texto": "Frío intenso esta semana",
-        "pais": "Liberia"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Ruanda"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Honduras"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Noruega"
-    },
-    {
-        "texto": "Tarde soleada y tranquila",
-        "pais": "Rusia"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Corea del Sur"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Mongolia"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Albania"
-    },
-    {
-        "texto": "Viento frío del norte",
-        "pais": "Chad"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Suecia"
-    },
-    {
-        "texto": "Nieve fresca sobre las montañas",
-        "pais": "Egipto"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Nepal"
-    },
-    {
-        "texto": "Tormenta de verano repentina",
-        "pais": "Omán"
-    },
-    {
-        "texto": "Clima cambiante constantemente",
-        "pais": "Qatar"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Irán"
-    },
-    {
-        "texto": "Clima cambiante constantemente",
-        "pais": "Suecia"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Uganda"
-    },
-    {
-        "texto": "Hace mucho viento hoy",
-        "pais": "Turquía"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Irán"
-    },
-    {
-        "texto": "Tarde soleada y tranquila",
-        "pais": "Letonia"
-    },
-    {
-        "texto": "Nebulosa mañana de otoño",
-        "pais": "Laos"
-    },
-    {
-        "texto": "Ráfagas de viento fuerte",
-        "pais": "Suiza"
-    },
-    {
-        "texto": "Paisaje cubierto de nieve",
-        "pais": "Turquía"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Afganistán"
-    },
-    {
-        "texto": "Frente frío acercándose",
-        "pais": "Finlandia"
-    },
-    {
-        "texto": "Mañana húmeda y fresca",
-        "pais": "Letonia"
-    },
-    {
-        "texto": "Tormenta intensa esta noche",
-        "pais": "Estados Unidos"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Angola"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Sudáfrica"
-    },
-    {
-        "texto": "Aroma a tierra mojada después de la lluvia",
-        "pais": "Namibia"
-    },
-    {
-        "texto": "Clima cambiante constantemente",
-        "pais": "Mozambique"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Ruanda"
-    },
-    {
-        "texto": "Agradable clima fresco",
-        "pais": "Corea del Sur"
-    },
-    {
-        "texto": "Heladas matinales en invierno",
-        "pais": "Yemen"
-    },
-    {
-        "texto": "Me encanta la lluvia",
-        "pais": "Zambia"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Tanzania"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Turquía"
-    },
-    {
-        "texto": "Brisa suave y agradable",
-        "pais": "Burundi"
-    },
-    {
-        "texto": "Aroma a tierra mojada después de la lluvia",
-        "pais": "Arabia Saudita"
-    },
-    {
-        "texto": "Huracán en la región",
-        "pais": "Bolivia"
-    },
-    {
-        "texto": "Granizo inesperado",
-        "pais": "Perú"
-    },
-    {
-        "texto": "Olas altas en la costa",
-        "pais": "Jamaica"
-    },
-    {
-        "texto": "Lindo día soleado",
-        "pais": "Somalia"
-    },
-    {
-        "texto": "Lluvia ligera y persistente",
-        "pais": "Australia"
-    },
-    {
-        "texto": "Atardecer con colores intensos",
-        "pais": "Letonia"
-    },
-    {
-        "texto": "Niebla espesa en el valle",
-        "pais": "Ruanda"
-    },
-    {
-        "texto": "Niebla densa por la mañana",
-        "pais": "Mali"
-    }
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Brasil" },
+    { "texto": "Nieve en las montañas", "pais": "Argentina" },
+    { "texto": "Festival cultural", "pais": "Colombia" },
+    { "texto": "Caminata en el parque", "pais": "Chile" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Francia" },
+    { "texto": "Ruta en bicicleta", "pais": "Holanda" },
+    { "texto": "Navegando el rio", "pais": "Alemania" },
+    { "texto": "Cafe en la ciudad", "pais": "Estados Unidos" },
+    { "texto": "Visita al zoologico", "pais": "Canada" },
+    { "texto": "Paseo en barco", "pais": "Australia" },
+    { "texto": "Safari de animales", "pais": "Sudafrica" },
+    { "texto": "Trekking en el bosque", "pais": "Peru" },
+    { "texto": "Mercado nocturno", "pais": "Tailandia" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Vista de la ciudad", "pais": "Hong Kong" },
+    { "texto": "Maratón anual", "pais": "Nueva York" },
+    { "texto": "Concierto al aire libre", "pais": "Reino Unido" },
+    { "texto": "Cine bajo las estrellas", "pais": "Mexico" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Mercado de flores", "pais": "Holanda" },
+    { "texto": "Parque de diversiones", "pais": "Estados Unidos" },
+    { "texto": "Partido de fútbol", "pais": "Brasil" },
+    { "texto": "Escapada a la montaña", "pais": "Suiza" },
+    { "texto": "Tarde de picnic", "pais": "Australia" },
+    { "texto": "Desierto misterioso", "pais": "Egipto" },
+    { "texto": "Puente icónico", "pais": "Portugal" },
+    { "texto": "Feria local", "pais": "Argentina" },
+    { "texto": "Torre famosa", "pais": "Francia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Brasil" },
+    { "texto": "Nieve en las montañas", "pais": "Argentina" },
+    { "texto": "Festival cultural", "pais": "Colombia" },
+    { "texto": "Caminata en el parque", "pais": "Chile" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Francia" },
+    { "texto": "Ruta en bicicleta", "pais": "Holanda" },
+    { "texto": "Navegando el rio", "pais": "Alemania" },
+    { "texto": "Cafe en la ciudad", "pais": "Estados Unidos" },
+    { "texto": "Visita al zoologico", "pais": "Canada" },
+    { "texto": "Paseo en barco", "pais": "Australia" },
+    { "texto": "Safari de animales", "pais": "Sudafrica" },
+    { "texto": "Trekking en el bosque", "pais": "Peru" },
+    { "texto": "Mercado nocturno", "pais": "Tailandia" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Vista de la ciudad", "pais": "Hong Kong" },
+    { "texto": "Maratón anual", "pais": "Nueva York" },
+    { "texto": "Concierto al aire libre", "pais": "Reino Unido" },
+    { "texto": "Cine bajo las estrellas", "pais": "Mexico" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Mercado de flores", "pais": "Holanda" },
+    { "texto": "Parque de diversiones", "pais": "Estados Unidos" },
+    { "texto": "Partido de fútbol", "pais": "Brasil" },
+    { "texto": "Escapada a la montaña", "pais": "Suiza" },
+    { "texto": "Tarde de picnic", "pais": "Australia" },
+    { "texto": "Desierto misterioso", "pais": "Egipto" },
+    { "texto": "Puente icónico", "pais": "Portugal" },
+    { "texto": "Feria local", "pais": "Argentina" },
+    { "texto": "Torre famosa", "pais": "Francia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Brasil" },
+    { "texto": "Nieve en las montañas", "pais": "Argentina" },
+    { "texto": "Festival cultural", "pais": "Colombia" },
+    { "texto": "Caminata en el parque", "pais": "Chile" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Francia" },
+    { "texto": "Ruta en bicicleta", "pais": "Holanda" },
+    { "texto": "Navegando el rio", "pais": "Alemania" },
+    { "texto": "Cafe en la ciudad", "pais": "Estados Unidos" },
+    { "texto": "Visita al zoologico", "pais": "Canada" },
+    { "texto": "Paseo en barco", "pais": "Australia" },
+    { "texto": "Safari de animales", "pais": "Sudafrica" },
+    { "texto": "Trekking en el bosque", "pais": "Peru" },
+    { "texto": "Mercado nocturno", "pais": "Tailandia" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Vista de la ciudad", "pais": "Hong Kong" },
+    { "texto": "Maratón anual", "pais": "Nueva York" },
+    { "texto": "Concierto al aire libre", "pais": "Reino Unido" },
+    { "texto": "Cine bajo las estrellas", "pais": "Mexico" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Mercado de flores", "pais": "Holanda" },
+    { "texto": "Parque de diversiones", "pais": "Estados Unidos" },
+    { "texto": "Partido de fútbol", "pais": "Brasil" },
+    { "texto": "Escapada a la montaña", "pais": "Suiza" },
+    { "texto": "Tarde de picnic", "pais": "Australia" },
+    { "texto": "Desierto misterioso", "pais": "Egipto" },
+    { "texto": "Puente icónico", "pais": "Portugal" },
+    { "texto": "Feria local", "pais": "Argentina" },
+    { "texto": "Torre famosa", "pais": "Francia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Brasil" },
+    { "texto": "Nieve en las montañas", "pais": "Argentina" },
+    { "texto": "Festival cultural", "pais": "Colombia" },
+    { "texto": "Caminata en el parque", "pais": "Chile" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Francia" },
+    { "texto": "Ruta en bicicleta", "pais": "Holanda" },
+    { "texto": "Navegando el rio", "pais": "Alemania" },
+    { "texto": "Cafe en la ciudad", "pais": "Estados Unidos" },
+    { "texto": "Visita al zoologico", "pais": "Canada" },
+    { "texto": "Paseo en barco", "pais": "Australia" },
+    { "texto": "Safari de animales", "pais": "Sudafrica" },
+    { "texto": "Trekking en el bosque", "pais": "Peru" },
+    { "texto": "Mercado nocturno", "pais": "Tailandia" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Vista de la ciudad", "pais": "Hong Kong" },
+    { "texto": "Maratón anual", "pais": "Nueva York" },
+    { "texto": "Concierto al aire libre", "pais": "Reino Unido" },
+    { "texto": "Cine bajo las estrellas", "pais": "Mexico" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Mercado de flores", "pais": "Holanda" },
+    { "texto": "Parque de diversiones", "pais": "Estados Unidos" },
+    { "texto": "Partido de fútbol", "pais": "Brasil" },
+    { "texto": "Escapada a la montaña", "pais": "Suiza" },
+    { "texto": "Tarde de picnic", "pais": "Australia" },
+    { "texto": "Desierto misterioso", "pais": "Egipto" },
+    { "texto": "Puente icónico", "pais": "Portugal" },
+    { "texto": "Feria local", "pais": "Argentina" },
+    { "texto": "Torre famosa", "pais": "Francia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Ruta en bicicleta", "pais": "Espana" },
+    { "texto": "Navegando el rio", "pais": "Espana" },
+    { "texto": "Cafe en la ciudad", "pais": "Espana" },
+    { "texto": "Visita al zoologico", "pais": "Espana" },
+    { "texto": "Tarde de picnic", "pais": "Espana" },
+    { "texto": "Desierto misterioso", "pais": "Espana" },
+    { "texto": "Comida deliciosa", "pais": "Italia" },
+    { "texto": "Museos increíbles", "pais": "Italia" },
+    { "texto": "Paseo en gondola", "pais": "Italia" },
+    { "texto": "Ruta en bicicleta", "pais": "Italia" },
+    { "texto": "Navegando el rio", "pais": "Italia" },
+    { "texto": "Cafe en la ciudad", "pais": "Italia" },
+    { "texto": "Visita al zoologico", "pais": "Italia" },
+    { "texto": "Tarde de picnic", "pais": "Italia" },
+    { "texto": "Desierto misterioso", "pais": "Italia" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Volcan activo", "pais": "Guatemala" },
+    { "texto": "Cafe en la ciudad", "pais": "Guatemala" },
+    { "texto": "Ruinas antiguas", "pais": "Guatemala" },
+    { "texto": "Mercado colorido", "pais": "Guatemala" },
+    { "texto": "Parque nacional", "pais": "Guatemala" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Catedral historica", "pais": "Guatemala" },
+    { "texto": "Fiesta tradicional", "pais": "Guatemala" },
+    { "texto": "Bosque nuboso", "pais": "Guatemala" },
+    { "texto": "Cascada impresionante", "pais": "Guatemala" },
+    { "texto": "Hermoso atardecer", "pais": "Espana" },
+    { "texto": "Amanecer en la playa", "pais": "Espana" },
+    { "texto": "Festival cultural", "pais": "Espana" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Italia" },
+    { "texto": "Caminata en el parque", "pais": "Espana" },
+    { "texto": "Lago espectacular", "pais": "Guatemala" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" },
+    { "texto": "Templo antiguo", "pais": "Japon" }
 ]

@@ -31,7 +31,7 @@ spec:
             cpu: "0.4"
             memory: "500Mi"
       - name: rust-api
-        image: lalogg/p2_so1_p14_redis_rust:4.0.0
+        image: lalogg/p2_so1_p14_redis_rust:7.0.0
         ports:
         - containerPort: 8000
         resources:
