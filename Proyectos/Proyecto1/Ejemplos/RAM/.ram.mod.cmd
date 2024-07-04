@@ -1,1 +1,0 @@
-savedcmd_/home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/RAM/ram.mod := printf '%s\n'   ram.o | awk '!x[$$0]++ { print("/home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/RAM/"$$0) }' > /home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/RAM/ram.mod
