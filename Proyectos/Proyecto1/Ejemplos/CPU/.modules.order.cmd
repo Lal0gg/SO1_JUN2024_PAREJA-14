@@ -1,1 +1,0 @@
-savedcmd_/home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/CPU/modules.order := {   echo /home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/CPU/cpu.o; :; } > /home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/CPU/modules.order

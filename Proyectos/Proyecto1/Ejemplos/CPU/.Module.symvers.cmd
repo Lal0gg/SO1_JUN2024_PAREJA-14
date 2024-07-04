@@ -1,1 +1,0 @@
-savedcmd_/home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/CPU/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/CPU/Module.symvers -T /home/lal0g/Downloads/U/2024/Sopes1/Ejemplo/CPU/modules.order -i Module.symvers -e 
